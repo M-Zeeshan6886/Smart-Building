@@ -12,10 +12,11 @@
           rgba(60, 80, 151, 0.858),
           rgba(60, 80, 151, 0.858)
         ),
-        url(../assest/psyco2.png);
+        url(../../assets/SignUpImages/leftback1.svg);
       // background-position: center;
-      object-fit: cover;
-      background-size: cover;
+      object-fit: contain;
+      background-position: center;
+      // background-size: cover;
       background-repeat: no-repeat;
       display: flex;
       align-items: center;
@@ -32,7 +33,7 @@
           text-align: center;
           font-size: 3.2rem;
           font-weight: 700;
-          text-shadow: 2px 2px 10px rgb(186, 185, 185);
+          // text-shadow: 2px 2px 10px rgb(186, 185, 185);
         }
       }
     }
@@ -43,14 +44,14 @@
       // display: flex;
       // flex-direction: column;
       // justify-content: center;
-  background-color: aqua;
+  background-color: white;
  &-content{
   width: 90%;
   height: auto;
   padding: 1rem 0rem;
   margin: auto;
-  margin-top: 3rem;
-  background-color: white;
+  margin-top: 1rem;
+  // background-color: white;
   &-topbar{
     height: auto;
     padding: .5rem 0rem;
@@ -118,9 +119,86 @@
     font-size: 1.2rem;
   }
   }
+  &-form{
+    width: 100%;
+    height: auto;
+    // margin-top: .5rem;
+    padding: .5rem 0rem;
+    // background-color: lightcoral;
+    &-content{
+      width: 75%;
+      height: auto;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      // padding: .5rem 0rem;
+      // background-color: peru;
+      &-left{
+        width: 45%;
+        height: auto;
+        // padding: .5rem 0rem;
+        // background-color: red;
+        // overflow: hidden;
+      }
+      &-right{
+        width: 45%;
+        height: auto;
+        // padding: .5rem 0rem;
+        // background-color: lightgreen;
+      }
+      &-row2{
+        width: 75%;
+      height: auto;
+      margin: auto;
+      // display: flex;
+      // justify-content: space-between;
+      // padding: .5rem 0rem;
+      // background-color: lightcyan;
+      }
+      &-row3{
+        width: 75%;
+      height: auto;
+      margin: auto;
+      // padding: .5rem 0rem;
+      display: flex;
+      justify-content: space-between;
+      // background-color: cadetblue;
+      &>input{
+        margin-top: -1.5rem;
+      }
+      &>p{
+        margin-left: 1rem;
+      }
+      }
+      &-row4{
+        width: 75%;
+        height:auto;
+        margin:auto;
+        display: flex;
+        justify-content: center;
+        &>Link{
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
     }
   }
+}
+.create-btn{
+  text-decoration: none;
+  padding: .5rem 1rem;
+  background-color: $neviblue;
+  color: white;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+}
+.create-btn:hover{
+  color: $neviblue;
+  background-color: white;
+  border: 1px solid $neviblue;
+  font-weight: 600;
 }
 .hr1{
   width: 22%;
