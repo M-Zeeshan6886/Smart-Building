@@ -36,7 +36,7 @@ const Login = () => {
                 <div className="signin-container-right-content-topbar-content">
                   <img src={rssAT} alt="rssat" />
                   <div className="signin-container-right-content-topbar-content-Signbtns">
-                    <button>Sign Up</button>
+                    <Link to="/" className='btn-up'>Sign Up</Link>
                     <button>Sign In</button>
                   </div>
                 </div>

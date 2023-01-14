@@ -76,6 +76,7 @@
       height: auto;
       padding: 1rem;
       display: flex;
+      align-items: center;
       justify-content: center;
       // background-color: lightcoral;
       &>*:not(:first-child){
@@ -91,6 +92,13 @@
     }
     }
   } 
+  .btn-in{
+    background: none;
+        border: none;
+        color: $neviblue;
+        text-decoration: none;
+        font-weight: bolder;
+  }
   &-heading{
     &>h1{
       text-align: center;

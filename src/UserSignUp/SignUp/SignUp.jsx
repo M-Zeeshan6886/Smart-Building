@@ -49,7 +49,7 @@ const SignUp = () => {
                   <img src={rssAT} alt="rssat" />
                   <div className="SignUp-container-right-content-topbar-content-Signbtns">
                     <button>Sign Up</button>
-                    <button>Sign In</button>
+                    <Link to="/login" className="btn-in">Sign In</Link>
                   </div>
                 </div>
               </div>
