@@ -1,5 +1,5 @@
-@import '../../scss/mixin';
-@import '../../scss/variables.scss';
+@import '../../sass/mixin';
+@import '../../sass/variables.scss';
 .signin {
   height: 100vh;
   &-container {
@@ -11,7 +11,7 @@
           rgba(60, 80, 151, 0.858),
           rgba(60, 80, 151, 0.858)
         ),
-        url(../assest/psyco2.png);
+        url(../../assets/SignUpImages/leftback2.svg);
       // background-position: center;
       object-fit: cover;
       background-repeat: no-repeat;
@@ -35,17 +35,96 @@
     }
     &-right {
       width: 57%;
-      height: 87.6vh;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-  // background-color: aqua;
+  background-color: white;
+      padding: 0rem 4rem;
 
       @include respond(phone) {
         width: 100%;
       }
-      padding: 4rem 4rem;
+
+      &-content{
+        // background-color: lightcoral;
+        &-topbar{
+          height: auto;
+          padding: .5rem 0rem;
+          // background-color: red;
+          &-content{
+            height: auto;
+            padding: .3rem;
+            display: flex;
+            align-items: center;
+            // background-color: lightblue;
+            &>img{
+      
+              @include respond (phone){
+                width: 25%;
+              }
+            }
+          &-Signbtns{
+            width: 50%;
+            height: auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            // background-color: lightcoral;
+            &>*:not(:first-child){
+              margin-left: 3rem;
+              font-weight: 400;
+            }
+            &>button{
+              background: none;
+              border: none;
+              color: $neviblue;
+              font-weight: bolder;
+            }
+          }
+          }
+        }
+        &-heading{
+          &>h1{
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+          }
+        }
+        &-socialIcons{
+          width: 100%;
+          margin-top: 1rem;
+          // background-color: aqua;
+          display: flex;
+          justify-content: center;
+         &>*:not(:first-child){
+          margin-left: 1.5rem;
+         }
+         &>img{
+          padding: .5rem;
+          border-radius: .5rem;
+          background-color: $gray;
+         }
+        }
+        &-hr{
+          margin-top:1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // &>hr{
+        //   // width: 30%;
+        // }
+        &>*:not(:first-child){
+          margin-left: 1rem;
+        }
+        &>span{
+          font-size: 1.2rem;
+        }
+        }
+
+      }
       &-form {
+        margin-top: 1.5rem;
         &-signin {
           width: 75%;
           margin: auto;
@@ -58,7 +137,7 @@
             display: flex;
             margin: 1.5rem 0rem;
             & > input {
-              accent-color: blue;
+              accent-color: $neviblue;
               margin-right: 1rem;
               border: none;
               outline: none;
@@ -66,6 +145,7 @@
             }
           }
           &-btn {
+            margin-top: 2rem;
             @include respond(phone) {
               padding-bottom: 2rem;
             }
@@ -114,8 +194,14 @@
   padding: .5rem 1rem;
   font-size: 1.5rem;
   text-decoration: none;
-  background-color: $blue;
+  background-color: $neviblue;
   color: white;
   border: none;
+  border-radius: .5rem;
+}
+.login-btn2:hover{
+  background-color: white;
+  color: $neviblue;
+  border: 1px solid $neviblue;
   border-radius: .5rem;
 }

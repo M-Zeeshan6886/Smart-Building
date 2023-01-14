@@ -45,6 +45,9 @@
       // flex-direction: column;
       // justify-content: center;
   background-color: white;
+  @include respond(phone){
+    width: 100%;
+  }
  &-content{
   width: 90%;
   height: auto;
@@ -62,6 +65,12 @@
       display: flex;
       align-items: center;
       // background-color: lightblue;
+      &>img{
+
+        @include respond (phone){
+          width: 25%;
+        }
+      }
     &-Signbtns{
       width: 50%;
       height: auto;
@@ -133,18 +142,27 @@
       justify-content: space-between;
       // padding: .5rem 0rem;
       // background-color: peru;
+      @include respond (phone){
+        flex-direction: column;
+      }
       &-left{
         width: 45%;
         height: auto;
         // padding: .5rem 0rem;
         // background-color: red;
         // overflow: hidden;
+        @include respond(phone){
+          width: 100%;
+        }
       }
       &-right{
         width: 45%;
         height: auto;
         // padding: .5rem 0rem;
         // background-color: lightgreen;
+      @include respond(phone){
+          width: 100%;
+        }
       }
       &-row2{
         width: 75%;
@@ -176,6 +194,9 @@
         margin:auto;
         display: flex;
         justify-content: center;
+        @include respond(phone){
+          margin-top: 2rem;
+        }
         &>Link{
           text-decoration: none;
         }

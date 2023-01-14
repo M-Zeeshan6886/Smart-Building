@@ -131,7 +131,7 @@ const SignUp = () => {
 <FormInput
                           label="Telephone"
                           name="fullname"
-                          type="text"
+                          type="tel"
                           place="Enter your phone no."
                         />
 

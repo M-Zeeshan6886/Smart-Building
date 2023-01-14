@@ -1,5 +1,8 @@
 import React from 'react';
 import './Login.scss';
+import rssAT from "../../assets/SignUpImages/rssAT.svg";
+import Google from "../../assets/SignUpImages/google.svg";
+import Tweeter from "../../assets/SignUpImages/tweeter.svg";
 import FormInput from '../FormInput/FormInput';
 import { Link } from 'react-router-dom';
    // For Form validation
@@ -29,6 +32,35 @@ const Login = () => {
             </div>
           </div>
           <div className="signin-container-right">
+          <div className="signin-container-right-content-topbar">
+                <div className="signin-container-right-content-topbar-content">
+                  <img src={rssAT} alt="rssat" />
+                  <div className="signin-container-right-content-topbar-content-Signbtns">
+                    <button>Sign Up</button>
+                    <button>Sign In</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="signin-container-right-content-heading">
+                <h1>Sign up to get started.</h1>
+              </div>
+
+              <div className="signin-container-right-content-socialIcons">
+                <img src={Google} alt="google-icon" />
+                <img src={Tweeter} alt="tweeter-icon" />
+              </div>
+
+              <div className="signin-container-right-content-hr">
+                <div className="hr1">
+                  <hr />
+                </div>
+                <span>Or</span>
+                <div className="hr1">
+                  <hr />
+                </div>
+              </div>
+
             <div className="signin-container-right-form">
               <Formik
                 initialValues={{
@@ -44,7 +76,7 @@ const Login = () => {
                   <div>
                     <Form className="signin-container-right-form-signin">
                       <FormInput
-                        label="Enter your username"
+                        label="Enter your Email"
                         name="email"
                         type="email"
                         place="Enter your email"
@@ -59,14 +91,12 @@ const Login = () => {
                         <input type="checkbox" />
                         <p className='chckbx-text'>Remember me</p>
                       </div>
+                        <Link className='frgt-pswrd'>Forget Your Password!?</Link>
                       
                       <div className="signin-container-right-form-signin-btn">
                         <center>
-                        
-      <Link to="/home" className="login-btn2">Loged in</Link>
-     
+      <Link to="" className="login-btn2">Sign in</Link>
                         </center>
-                        <a href="#" className='frgt-pswrd'>Forget Your Password!?</a>
                       </div>
                       
                     </Form>
