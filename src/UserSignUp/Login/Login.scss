@@ -100,10 +100,34 @@
          &>*:not(:first-child){
           margin-left: 1.5rem;
          }
-         &>img{
+         &-icons{
+        width: 3%;
+        height: auto;
+        border-radius: .5rem;
+        display: flex;
+        cursor: pointer;
+        background-color: $neviblue;
+        &>img{
           padding: .5rem;
           border-radius: .5rem;
           background-color: $gray;
+        }
+        &>p{
+          visibility: hidden;
+        }
+      }
+      &-icons:hover{
+        transition: .3s ease-in-out;
+          //  padding: 0rem .3rem;
+          width: 15%;
+          align-items: center;
+          justify-content: space-between;
+          &>p{
+         visibility: visible;
+         color: white;
+         font-size: 1.3rem;
+         margin-right: 1.7rem;
+          }
          }
         }
         &-hr{

@@ -47,8 +47,15 @@ const Login = () => {
               </div>
 
               <div className="signin-container-right-content-socialIcons">
+                <div className='signin-container-right-content-socialIcons-icons'>
                 <img src={Google} alt="google-icon" />
+                <p>google</p>
+                </div>
+                <div className='signin-container-right-content-socialIcons-icons'>
                 <img src={Tweeter} alt="tweeter-icon" />
+                <p>twiter</p>
+                </div>
+                
               </div>
 
               <div className="signin-container-right-content-hr">

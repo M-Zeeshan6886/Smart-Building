@@ -58,9 +58,16 @@ const SignUp = () => {
                 <h1>Sign up to get started.</h1>
               </div>
 
-              <div className="SignUp-container-right-content-socialIcons">
+              <div className="signin-container-right-content-socialIcons">
+                <div className='signin-container-right-content-socialIcons-icons'>
                 <img src={Google} alt="google-icon" />
+                <p>google</p>
+                </div>
+                <div className='signin-container-right-content-socialIcons-icons'>
                 <img src={Tweeter} alt="tweeter-icon" />
+                <p>twiter</p>
+                </div>
+                
               </div>
 
               <div className="SignUp-container-right-content-hr">
