@@ -1,0 +1,105 @@
+@import '../../sass/mixin';
+@import '../../sass/variables.scss';
+
+
+.profile-container1{
+    width: 100%;
+    height: auto;
+    padding: .5rem 0rem ;
+    background-color: white;
+    box-shadow: 1px 1px 10px 0px gray;
+    &-content{
+        width: 90%;
+        height: auto;
+        margin: auto;
+    &-topbar{
+        width: 100%;
+        height: auto;
+        // padding: .2rem 0rem;
+        // background-color: lightcoral;
+        &-content{
+            width: 100%;
+            height: auto;
+            // padding: .2rem 0rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // background-color: aqua;
+            &>img{
+                width:12%;
+            }
+        &-right{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            &>img{
+             cursor: pointer;
+            }
+        }
+        }
+    }
+}
+}
+.profile-image{
+    width: 50%;
+    height: auto;
+    margin-right:1rem;
+ cursor: pointer;
+    // padding: .5rem ;
+    // background-color: lightcoral;
+    // &>img{
+    //     width: 10%;
+    //     height: 10%;
+    // }
+}
+
+.profile-container2{
+    width: 100%;
+    height: auto;
+    // padding: .4rem 0rem;
+    background-color: lawngreen;
+    &-content{
+        width: 100%;
+        height: auto;
+        // padding: .2rem 0rem;
+        background-color: aqua;
+        &-left{
+            width: 20%;
+            height: 82vh;
+            padding: 3rem 0rem;
+            background-color: $neviblue;
+            &-content{
+                width: 80%;
+                height: auto;
+                padding: 1rem 0rem ;
+                margin: auto;
+                // background-color: peru;
+            &>*:not(:first-child){
+                margin-top: 3rem;
+
+            }
+            &>*:not(:first-child,:last-child){
+                font-weight: bold;
+            }
+            }
+        }
+    }
+}
+.leftcomponents{
+    // margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    // justify-content: space-aroun;
+    &>img{
+        width: 20px;
+        margin-left: 3.8rem;
+        color: rgba(135, 132, 132, 0.499);
+    }
+    &>p{
+        font-size: 1.5rem;
+        color: #ffffffde;
+        margin-left: 4rem;
+        
+    }
+}
