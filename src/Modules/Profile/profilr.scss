@@ -63,6 +63,7 @@
         width: 100%;
         height: auto;
         // padding: .2rem 0rem;
+        display: flex;
         background-color: aqua;
         &-left{
             width: 20%;
@@ -84,6 +85,85 @@
             }
             }
         }
+        &-right{
+            width: 80%;
+            height: auto;
+            // padding: .5rem 0rem ;
+            background-color: lightgreen;
+            &-popup{
+                width: 100%;
+                height: 90vh;
+                display: flex;
+                flex-direction: column;
+
+                background-color: rgba(88, 86, 86, 0.548);
+                z-index: 9999;
+                &-content{
+                    width: 70%;
+                    height:auto;
+                    margin: auto;
+                    border-radius: .5rem;
+                    background-color: $neviblue;
+                    &-topEdit{
+                        width: 95%;
+                        height: auto;
+                        margin: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: .5rem 0rem;
+                        // background-color: peru;
+                        &>img{
+                            cursor: pointer;
+                        }
+                        &-profileimg{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            &>*:not(:last-child){
+                                height: 8rem;
+                                width: 7rem;
+                                background-color: white;
+                                border-radius: 50%;
+                                margin-top: -4rem;
+                                object-fit: cover;
+                            }
+                            &>*:not(:first-child){
+                                background-color: $neviblue;
+                                padding: .2rem;
+                                font-size: 1.5rem;
+                                border-radius: 50%;
+                                margin-top: -1rem;
+                            }
+                        }
+                        &-editBox{
+                            padding: .2rem 0rem;
+                            width: 11%;
+                            border-radius: .2rem;
+                            display: flex;
+                            justify-content: space-between;
+                            background-color: white;
+                            &>img{
+                                margin-left: .5rem;
+                            }
+                            &>p{
+                                color: $neviblue;
+                                margin-right: .4rem;
+                            }
+                        }
+                    }
+                    &-bottomEdit{
+            width: 90%;
+            height: auto;
+            margin: auto;
+            padding: .5rem 0rem;
+            // background-color: lightcoral;
+        }
+                }
+            }
+        }
+        
     }
 }
 .leftcomponents{
@@ -94,12 +174,34 @@
     &>img{
         width: 20px;
         margin-left: 3.8rem;
+        cursor: pointer;
         color: rgba(135, 132, 132, 0.499);
     }
     &>p{
         font-size: 1.5rem;
         color: #ffffffde;
         margin-left: 4rem;
+        cursor: pointer;
         
+    }
+}
+
+
+.popup-data{
+    width: 100%;
+    height: auto;
+    padding: .2rem 0rem;
+    &-content{
+        width: 100%;
+        height: auto;
+        padding: .2rem 0rem;
+        line-height: 3.5vh;
+        // background-color: darkgrey;
+      &>p{
+        color: white;
+      }
+      &>h2{
+        color: white;
+      }
     }
 }

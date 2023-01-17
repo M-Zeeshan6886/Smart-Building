@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './profilr.scss';
 import topbarImage from '../../assets/SignUpImages/rssAT.svg';
 import arrwdwn from '../../assets/SignUpImages/arrowdown.svg';
@@ -6,8 +6,21 @@ import PImage from '../../assets/SignUpImages/profileimage.svg';
 import Dasboard from '../../assets/leftbar/dashboard.svg';
 import Pimage from '../../assets/leftbar/pfile.svg';
 import setting from '../../assets/leftbar/setting.svg';
+import Cross from  '../../assets/popup/cross.svg';
+import Profileimg from  '../../assets/popup/profilew.png';
+import Editerw from  '../../assets/popup/whiteEditer.svg';
+import EditerB from  '../../assets/popup/blueEditer.svg';
+
+
 const profile = () => {
-  return (
+    const [popup, setPop]=useState(false);
+const handleClickOpen=()=>{
+    setPop(!popup);
+}
+const closePopup=()=>{
+    setPop(false);
+}
+    return (
     <>
     <div className='profile-container1'>
         <div className='profile-container1-content'>
@@ -18,7 +31,7 @@ const profile = () => {
                     <div className='profile-image'>
                         <img src={PImage} alt="topbarimage" />
                     </div>
-                    <img src={arrwdwn} alt="arrowdown" />
+                    <img src={arrwdwn} alt="arrowdown" onClick={handleClickOpen} />
                 </div>
             </div>
         </div>
@@ -32,7 +45,7 @@ const profile = () => {
                     text="Dashboard"
                     DasboardImg={Dasboard} 
                     />
-                    <Leftbarcmpnt
+                    <Leftbarcmpnt 
                     text="Profile"
                     DasboardImg={Pimage} 
                     />
@@ -42,7 +55,59 @@ const profile = () => {
                     />
                     </div>
                 </div>
-                <div className='profile-container2-content-right'></div>
+                <div className='profile-container2-content-right' >
+                {popup?    <div className='profile-container2-content-right-popup'>
+                        <div className='profile-container2-content-right-popup-content'>
+                         <div className='profile-container2-content-right-popup-content-topEdit'>
+                            <img src={Cross} alt="cross" onClick={closePopup} />
+                            <div className='profile-container2-content-right-popup-content-topEdit-profileimg'>
+                                <img src={Profileimg} alt="iges" />
+                                <img src={Editerw} alt="editers" />
+                            </div>
+                            <div className='profile-container2-content-right-popup-content-topEdit-editBox'>
+                                <img src={EditerB} alt="editers" />
+                                <p>Edit profile</p>
+                            </div>
+                         </div>
+
+                         <div className='profile-container2-content-right-popup-content-bottomEdit'>
+                         <PopupData 
+                         Tittle="Display Name" 
+                         Data="John Smith"
+                         />
+<PopupData 
+                         Tittle="Office" 
+                         Data="Example Company"
+                         />
+
+                         <PopupData 
+                         Tittle="Position" 
+                         Data="Executive Officer"
+                         />
+
+                         <PopupData 
+                         Tittle="Email" 
+                         Data="Example@email.com"
+                         />
+
+                         <PopupData 
+                         Tittle="password" 
+                         Data="************"
+                         />
+
+                         <PopupData 
+                         Tittle="Phone Number" 
+                         Data="+92123-456-786"
+                         />
+                         <PopupData 
+                         Tittle="Address" 
+                         Data="Hira Mandi Washington,4408"
+                         />
+
+                         </div>
+                        </div>
+                    </div>:""}
+                </div>
             </div>
         </div>
     
@@ -58,6 +123,18 @@ const Leftbarcmpnt=({DasboardImg,text})=>{
         <div className='leftcomponents'>
             <img src={DasboardImg} alt="dashboard-img" />
             <p>{text}</p>
+        </div>
+    )
+}
+
+
+const PopupData=({Tittle,Data})=>{
+    return(
+        <div className='popup-data'>
+            <div className='popup-data-content'>
+                <p>{Tittle} </p>
+                <h2>{Data} </h2>
+                 </div>
         </div>
     )
 }
