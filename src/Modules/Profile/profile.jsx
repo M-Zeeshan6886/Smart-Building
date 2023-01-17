@@ -22,6 +22,7 @@ const closePopup=()=>{
 }
     return (
     <>
+    <div className='sticky'>
     <div className='profile-container1'>
         <div className='profile-container1-content'>
         <div className='profile-container1-content-topbar'>
@@ -36,7 +37,12 @@ const closePopup=()=>{
             </div>
         </div>
         </div>
-        </div>    
+        </div>
+        </div>
+        <br />
+        <br />
+        <br />
+    
         <div className='profile-container2'>
             <div className='profile-container2-content'>
                 <div className='profile-container2-content-left'>
@@ -45,7 +51,7 @@ const closePopup=()=>{
                     text="Dashboard"
                     DasboardImg={Dasboard} 
                     />
-                    <Leftbarcmpnt 
+                    <Leftbarcmpnt  
                     text="Profile"
                     DasboardImg={Pimage} 
                     />
@@ -121,8 +127,8 @@ export default profile;
 const Leftbarcmpnt=({DasboardImg,text})=>{
     return(
         <div className='leftcomponents'>
-            <img src={DasboardImg} alt="dashboard-img" />
-            <p>{text}</p>
+            <img src={DasboardImg} alt="dashboard-img"  />
+            <p >{text}</p>
         </div>
     )
 }
