@@ -62,9 +62,14 @@ const closePopup=()=>{
                     </div>
                 </div>
                 <div className='profile-container2-content-right' >
-                    <ProgressBar />
-                    <ProgressBar />
-                    <ProgressBar />
+                    <ProgressBar Tittle="FM Tickets"/>
+                    <ProgressBar Tittle="Faults"/>
+                    <ProgressBar Tittle="Faults"/>
+                    <br/>
+                    <ProgressBar Tittle="Assets Online"/>
+                    <ProgressBar Tittle="Assets Online"/>
+                    <ProgressBar Tittle="Assets Online"/>
+
                 {popup?    <div className='profile-container2-content-right-popup'>
                         <div className='profile-container2-content-right-popup-content'>
                          <div className='profile-container2-content-right-popup-content-topEdit'>
@@ -151,11 +156,11 @@ const PopupData=({Tittle,Data})=>{
     )
 }
 
-const ProgressBar=()=>{
+const ProgressBar=({Tittle})=>{
     return(
         <div className='pbar-container'>
             <div className='pbar-container-content'>
-                <div className='pbar-container-content-one'>FM Tickets</div>
+                <div className='pbar-container-content-one'>{Tittle}</div>
                 <div className='pbar-container-content-two'>
                     <div className='pbar-container-content-two-content'>
                     <div className='pbar-container-content-two-content-bar1'>
