@@ -92,6 +92,7 @@
         &-right{
             width: 80%;
             height: auto;
+            display: flex;
             // padding: .5rem 0rem ;
             background-color: white;
             &-popup{
@@ -207,5 +208,79 @@
       &>h2{
         color: white;
       }
+    }
+}
+
+.pbar-container{
+    width: 15%;
+    height: auto;
+    padding: .2rem 0rem;
+    margin-top: 5rem;
+    margin-left: 2rem;
+    // background-color: aqua;
+    &-content{
+        width: 100%;
+        height: auto;
+        padding: .2rem 0rem;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+        // background-color: lightcoral;
+        &-one{
+            width: 100%;
+            height: auto;
+            padding: .5rem 0rem;
+            border-top-left-radius: .5rem;
+            border-top-right-radius: .5rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $neviblue;
+        }
+        &-two{
+            width: 100%;
+            height: auto;
+            padding: .5rem 0rem;
+            background-color:  #F7F9FF;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+            &-content{
+                width: 90%;
+                height: 25vh;
+                margin: auto;
+                display: flex;
+                // background-color: pink;
+                &-bar1{
+                    width: 90%;
+                    height: 22vh;
+                    margin: auto;
+                    display: flex;
+                    border-radius: 50%;
+                    background-color: lightgray;
+                }
+                &-bar2{
+                    width: 100%;
+                    height: 22vh;
+                    margin: auto;
+                    display: flex;
+                    border-radius: 50%;
+                    background: linear-gradient(90deg, #3C5097 2.17%, #0091E9 100%);
+                }
+                &-bar3{
+                    width: 90%;
+                    height: 20vh;
+                    margin: auto;
+                    font-size: 3.5rem;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background-color: white;
+                    color: #3C5097;
+                }
+            }
+        }
     }
 }
