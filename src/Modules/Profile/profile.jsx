@@ -42,6 +42,7 @@ const closePopup=()=>{
         <br />
         <br />
         <br />
+        <br />
     
         <div className='profile-container2'>
             <div className='profile-container2-content'>

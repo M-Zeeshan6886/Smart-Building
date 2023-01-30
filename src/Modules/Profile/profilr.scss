@@ -96,13 +96,13 @@
             // padding: .5rem 0rem ;
             background-color: white;
             &-popup{
-                width: 100%;
+                width: 80%;
                 height: 90vh;
                 display: flex;
                 flex-direction: column;
-
                 background-color: rgba(88, 86, 86, 0.548);
                 z-index: 9999;
+                position: fixed;
                 &-content{
                     width: 70%;
                     height:auto;
